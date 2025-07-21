@@ -18,13 +18,13 @@ const server = createServer(app)
 connectDb();
 app.use(helmet());
 app.use(cors({
-    origin: 'https://skillbackend-r7sc.onrender.com/',
+    origin: 'http://localhost:5173',
     credentials: true,
 }));
 // Sets secure HTTP headers
 const io = new Server(server, {
     cors: {
-        origin: "https://skillbackend-r7sc.onrender.com/",
+        origin: "http://localhost:5173",
         credentials: true,
     },
 });
