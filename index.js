@@ -18,13 +18,13 @@ const server = createServer(app)
 connectDb();
 app.use(helmet());
 app.use(cors({
-    origin: 'https://skillfrontend.vercel.app/',
+    origin: 'https://skillfrontend.vercel.app',
     credentials: true,
 }));
 // Sets secure HTTP headers
 const io = new Server(server, {
     cors: {
-        origin: "https://skillfrontend.vercel.app/",
+        origin: "https://skillfrontend.vercel.app",
         credentials: true,
     },
 });
